@@ -2,7 +2,7 @@
 This is a simple yet effect sign up page that you can add to any web page. It is mobile responsive and I made sure to keep to HTML and 
 CSS easy to change your needs.
 
-![Image of SignUp](https://octodex.github.com/images/yaktocat.png)
+![Image of SignUp](https://github.com/ecombee28/Sign-Up/blob/master/signUp/images/Screen%20Shot%202019-05-04%20at%204.55.18%20PM.png)
 
 # How to Use
 * The signup page has three main fields username, email, and password. When the username field is out of focus it makes an
