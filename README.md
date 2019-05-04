@@ -2,6 +2,8 @@
 This is a simple yet effect sign up page that you can add to any web page. It is mobile responsive and I made sure to keep to HTML and 
 CSS easy to change your needs.
 
+![Image of SignUp](https://octodex.github.com/images/yaktocat.png)
+
 # How to Use
 * The signup page has three main fields username, email, and password. When the username field is out of focus it makes an
 ajax call to the database to see if the username is available for use. If it is not available a warning will appear letting the user know and if the username is available for use a green check mark will appear.
