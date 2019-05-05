@@ -29,6 +29,6 @@ if ($conn->connect_error) {
     {
          mail($to, $subject, $message, $headers);
     }
-    header("Location: http://combeecreation.com/signUp/HTML/index.html"); 
+    
 }
 ?>
