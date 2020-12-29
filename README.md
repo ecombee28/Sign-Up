@@ -11,6 +11,7 @@ ajax call to the database to see if the username is available for use. If it is 
 * The password field checks for 3 parameters uppercase letter, lower case letter, number, and an input length of 7. Once these have been filled you will get a green check mark.
 * Once all 3 parameters are meet then the submit button will be ready to use.
 * Once the username, email, and password have been submitted an email will be sent to newly signed up user. This email can be found on the submit.php page and can be changed to your own needs.
+* [Demo](https://combeecreations.com/signUp/)
 
 # What I learned
 I learned a great deal of Javascript while designing this page and sharpened up my HTML and CSS skills. I also learned about the PHP mail function and all that it has to offer.
