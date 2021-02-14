@@ -1,4 +1,3 @@
-    
     // Global variables
 
     var usernameCheck = false;
@@ -10,30 +9,30 @@
     var passwordFilled = false;
 
 
-   /*
-   * This
-   */
+    /*
+     * This
+     */
     function checkUsername() {
 
         var formInput = document.getElementById("userName").value;
 
-    
+
 
         if (formInput.length != 0 && formInput.length > 5) {
-           
+
             $.ajax({
 
-                url: " ",
+                url: "https://combeecreations.com/signUp/PHP/checkUsername.php",
                 method: "POST",
                 data: {
-                    username: formInput
+                    username: formInput,
                 },
-                success: function (result) {
+                success: function(result) {
                     if (result != 0) {
                         document.getElementById('checkedU').style.display = "none";
                         document.getElementById("usernameW").innerHTML = "Username already taken.";
                         usernameCheck = false;
-                        console.log("Check Username = "+result);
+                        console.log("Check Username = " + result);
                         disableBtn();
                     } else {
                         document.getElementById("usernameW").innerHTML = "";
@@ -43,7 +42,7 @@
                     }
 
                 },
-                error: function () {
+                error: function() {
                     console.log("error");
                 }
 
@@ -63,17 +62,17 @@
             /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formInput)) {
             $.ajax({
 
-                url: " ",
+                url: "https://combeecreations.com/signUp/PHP/checkEmail.php",
                 method: "POST",
                 data: {
                     email: formInput
                 },
-                success: function (result) { // results returns the count of rows from the DBMS
+                success: function(result) { // results returns the count of rows from the DBMS
                     if (result != 0) {
                         document.getElementById('checkedE').style.display = "none";
                         document.getElementById("emailW").innerHTML = "This email is already in use.";
                         emailCheck = false;
-                        console.log("Checked email = "+result);
+                        console.log("Checked email = " + result);
                         disableBtn();
                     } else {
                         document.getElementById("emailW").innerHTML = "";
@@ -83,7 +82,7 @@
                     }
 
                 },
-                error: function () {
+                error: function() {
                     console.log("error");
                 }
 
@@ -91,7 +90,7 @@
 
         } else if (formInput.length != 0 &&
             !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formInput)) {
-                document.getElementById('checkedE').style.display = "none";
+            document.getElementById('checkedE').style.display = "none";
             document.getElementById("emailW").innerHTML = "Email not vaild";
         }
     }
@@ -125,7 +124,7 @@
 
         if (passLength >= 7) {
             length = true;
-            document.getElementById('length').style.color = "#237223";
+            document.getElementById('length').style.color = "#2dc02d";
         } else {
             length = false;
             document.getElementById('checkedP').style.display = "none";
@@ -134,72 +133,72 @@
         }
 
 
-        if (!password.charAt(password.length - 1).match(/^[0-9a-zA-Z]+$/)) {
-            // You could put a warning!
-        } else {
-           
-            for (i = 0; i < password.length; i++) {
-                if (password.charAt(i).match(/^[A-Z]+$/)) {
-                    upperCrt++;
-                }
-                if (password.charAt(i).match(/^[a-z]+$/)) {
-                    lowerCrt++;
-                }
-                if (password.charAt(i).match(/^[0-9]+$/)) {
-                    numberCrt++;
-                }
+        //if (!password.charAt(password.length - 1).match(/^[0-9a-zA-Z]+$/)) {
+        // You could put a warning!
+        // } else {
+
+        for (i = 0; i < password.length; i++) {
+            if (password.charAt(i).match(/^[A-Z]+$/)) {
+                upperCrt++;
             }
-
-            if (upperCrt > 0) {
-                upper = true;
-                document.getElementById('upper').style.color = "#237223";
-
-            } else if (upperCrt == 0) {
-                upper = false;
-                document.getElementById('upper').style.color = "#d4d3d3";
-
+            if (password.charAt(i).match(/^[a-z]+$/)) {
+                lowerCrt++;
             }
-
-            if (lowerCrt > 0) {
-                lower = true;
-                document.getElementById('lower').style.color = "#237223";
-            } else if (lowerCrt == 0) {
-                lower = false;
-                document.getElementById('lower').style.color = "#d4d3d3";
-
+            if (password.charAt(i).match(/^[0-9]+$/)) {
+                numberCrt++;
             }
+        }
 
-            if (numberCrt > 0) {
-                number = true;
-                document.getElementById('number').style.color = "#237223";
+        console.log("upper:" + upperCrt + " lower:" + lowerCrt + " number:" + numberCrt);
 
-            } else if (numberCrt == 0) {
-                number = false;
-                document.getElementById('number').style.color = "#d4d3d3";
+        if (upperCrt > 0) {
+            upper = true;
+            document.getElementById('upper').style.color = "#2dc02d";
 
-            }
-
-            /*
-             * If Uppercase, LowerCase, Number, and length parameters 
-             * are met, then give the green check.
-             */
-            if (upper && lower && number && length) {
-                document.getElementById("passwordW").innerHTML = " ";
-                document.getElementById('checkedP').style.display = "inline";
-                disableBtn();
-            }
-
-            upperCrt = 0;
-            lowerCrt = 0;
-            numberCrt = 0;
-
+        } else if (upperCrt === 0) {
+            upper = false;
+            document.getElementById('upper').style.color = "#d4d3d3";
 
         }
 
+        if (lowerCrt > 0) {
+            lower = true;
+            document.getElementById('lower').style.color = "#2dc02d";
+        } else if (lowerCrt === 0) {
+            lower = false;
+            document.getElementById('lower').style.color = "#d4d3d3";
+
+        }
+
+        if (numberCrt > 0) {
+            number = true;
+            document.getElementById('number').style.color = "#2dc02d";
+
+        } else if (numberCrt === 0) {
+            number = false;
+            document.getElementById('number').style.color = "#d4d3d3";
+
+        }
+
+        console.log("Upper=" + upper + "  lower=" + lower + " number=" + number);
+        /*
+         * If Uppercase, LowerCase, Number, and length parameters 
+         * are met, then give the green check.
+         */
+        if (upper && lower && number && length) {
+            document.getElementById("passwordW").innerHTML = " ";
+            document.getElementById('checkedP').style.display = "inline";
+            disableBtn();
+        } else {
+            disableBtn();
+        }
+
+        upperCrt = 0;
+        lowerCrt = 0;
+        numberCrt = 0;
 
 
-
-
+        //}
     } // end of checkPassword()
 
     function disableBtn() {
