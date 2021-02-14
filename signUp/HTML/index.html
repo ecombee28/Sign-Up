@@ -12,68 +12,59 @@
 
 <head>
     <meta charset="utf-8">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
-    <script type='text/javascript' src='http://code.jquery.com/jquery.min.js'></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type='text/javascript' src='https://code.jquery.com/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Alice|Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script type='text/javascript' src='http://code.jquery.com/jquery.min.js'></script>
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
     <title>Sign Up</title>
 
 </head>
+
 <body>
-    <script src="../JS/script.js"></script>
-    
-            <div class="signedUpMessage"></div>
-    
-   
+    <script src="JS/script.js"></script>
+
+    <div class="signedUpMessage"></div>
+
+
     <div class="container">
         <div class="banner">
             <h1>Sign Up</h1>
-            <p>Sign up for your free account today and enjoy
-                all that we have to offer. </p>
+            <p style="color: whitesmoke;">Sign up for your free account today and enjoy all that we have to offer. </p>
         </div>
 
-        <form method="post" action="../PHP/submit.php" enctype="multipart/form-data">
+        <form method="post" action="PHP/submit.php" enctype="multipart/form-data">
             <div class="form-group">
-                <label>Username</label><i id="checkedU" class="fas fa-check"></i><label id="usernameW"
-                    style="font-size: 14px; color: #f52323; margin-left: 8px;"></label>
-                <input type="text" name="username" class="form-control" id="userName" aria-describedby="emailHelp"
-                    placeholder="Enter Username" onfocusout="checkUsername()">
+                <label>Username</label><i id="checkedU" class="fas fa-check"></i><label id="usernameW" style="font-size: 14px; color: #f52323; margin-left: 8px;"></label>
+                <input type="text" name="username" class="form-control" id="userName" aria-describedby="emailHelp" placeholder="Enter Username" onfocusout="checkUsername()">
 
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label><i id="checkedE" class="fas fa-check"></i><label
-                    id="emailW" style="font-size: 14px; color: #f52323; margin-left: 8px;"></label>
-                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
-                    placeholder="Enter email" onfocusout="checkEmail()">
+                <label for="exampleInputEmail1">Email address</label><i id="checkedE" class="fas fa-check"></i><label id="emailW" style="font-size: 14px; color: #f52323; margin-left: 8px;"></label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" onfocusout="checkEmail()">
                 <small id="emailHelp" class="form-text text-muted text-color">We'll never share your email with anyone
                     else.</small>
             </div>
             <div class="form-group">
 
-                    <label for="exampleInputPassword1">Password</label><i id="checkedP" class="fas fa-check"></i><label
-                    id="passwordW" style="font-size: 14px; color: #f52323; margin-left: 8px;"></label>
-                    <input type="password" name="password" class="form-control" id="password" placeholder="Password"
-                        onkeyup="checkPassword()">
-                    <div class="passConfirm">
-                        <p id="upper">* Uppercase letter</p>
-                        <p id="lower">* Lowercase letter</p>
-                        <p id="number">* Number</p>
-                        <p id="length">* Length</p>
-                    </div>
+                <label for="exampleInputPassword1">Password</label><i id="checkedP" class="fas fa-check"></i><label id="passwordW" style="font-size: 14px; color: #f52323; margin-left: 8px;"></label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Password" onkeyup="checkPassword()">
+                <div class="passConfirm">
+                    <p id="upper">* Uppercase letter</p>
+                    <p id="lower">* Lowercase letter</p>
+                    <p id="number">* Number</p>
+                    <p id="length">* Length</p>
                 </div>
+            </div>
 
-            <button type="submit" id="submitBtn" class="btn btn-primary submitBtn" disabled>Submit</button>
+            <button type="submit" id="submitBtn" class="submitBtn" disabled>Submit</button>
 
         </form>
     </div>
-    
+
 
 </body>
 
