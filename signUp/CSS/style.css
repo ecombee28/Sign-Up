@@ -12,16 +12,22 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
-#wrapper{
+
+h1 {
+    font-size: 55px;
+    color: whitesmoke;
+}
+
+#wrapper {
     width: 100%;
     height: 100vh;
-    background-color: #d4d3d3;
+    background-color: rgb(212, 211, 211);
     z-index: 50;
     opacity: .4;
 }
-.signedUpMessage{
+
+.signedUpMessage {
     width: 400px;
     height: 200px;
     background-color: #1b1bfc;
@@ -32,19 +38,17 @@ body {
     transition: all .5s ease-in-out;
     animation: box 1.5s linear forwards;
     display: none;
-
 }
+
 @keyframes box {
-
     0% {
-        left:-50%;
+        left: -50%;
     }
-
     100% {
-        left:50%;
+        left: 50%;
     }
-
 }
+
 .container {
     width: 50%;
     height: auto;
@@ -52,12 +56,13 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: rgba(56, 56, 56, 0.89);
     padding-bottom: 30px;
-    -webkit-box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.75);
-
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 2px 19px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 19px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 19px 0px rgba(0, 0, 0, 0.75);
 }
 
 .banner {
@@ -67,76 +72,101 @@ body {
     text-align: center;
     border-radius: 20px;
 }
-.banner p{
-    font-size: 14px;
+
+.banner p {
+    font-size: 18px;
+    color: whitesmoke;
 }
-form{
+
+form {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
+
+
 /* This is for the title labels */
-form > .form-group > label:nth-child(odd){
+
+form>.form-group>label:nth-child(odd) {
+    font-size: 22px;
+    color: whitesmoke;
+}
+
+form>.form-group>input {
     font-size: 22px;
 }
 
-form > .form-group > input{
-    font-size: 22px;
+.text-color {
+    color: #f3f3f3;
+    font-size: 17px;
 }
-.text-color{
-    color: #1b1bfc;
-}
-.warningMess{
+
+.warningMess {
     font-size: 1em;
     color: #f52323;
     margin-left: 8px;
 }
-form .submitBtn{
-   width: 120px;
-   font-size: 22px;
-   padding: 6px;
+
+form .submitBtn {
+    font-size: 25px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-left: 35%;
 }
-.passConfirm{
-    width: 300px;
+
+.passConfirm {
+    width: 80%;
     padding: 12px;
     display: flex;
-  flex-wrap: wrap;
-    
+    flex-wrap: wrap;
 }
-.passConfirm i{
+
+.passConfirm i {
     font-size: 11px;
-    color: #d4d3d3; 
+    color: #d4d3d3;
 }
-.passConfirm > p{
+
+.passConfirm>p {
     display: flex;
     font-size: 14px;
-    color: #d4d3d3; 
+    color: #d4d3d3;
 }
-.passConfirm p:nth-child(2){
-   margin-left: 15px;
+
+.passConfirm p:nth-child(2) {
+    margin-left: 14px;
 }
- .passConfirm p:nth-child(4){
+
+.passConfirm p:nth-child(3) {
+    margin-left: 20px;
+}
+
+.passConfirm p:nth-child(4) {
     margin-left: 15px;
- }
- #checkedE{
-     color: #237223;
-     display: none;
-     margin-left:11px;
-     font-size: 15px;
- }
- #checkedU{
-    color: #237223;
+}
+
+#checkedE {
+    color: #2dc02d;
     display: none;
-    margin-left:11px;
+    margin-left: 11px;
     font-size: 15px;
 }
-#checkedP{
-    color: #237223;
+
+#checkedU {
+    color: #2dc02d;
     display: none;
-    margin-left:11px;
+    margin-left: 11px;
     font-size: 15px;
 }
-@media screen and (max-width:980px){
+
+#checkedP {
+    color: #2dc02d;
+    display: none;
+    margin-left: 11px;
+    font-size: 15px;
+}
+
+@media screen and (max-width:980px) {
     .container {
         width: 80%;
         height: auto;
@@ -144,23 +174,27 @@ form .submitBtn{
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        
     }
-    
 }
-@media screen and (max-width:720px){
 
-}
-@media screen and (max-width:480px){
+@media screen and (max-width:720px) {
     .container {
-        width: 97%;
+        width: 95%;
         height: auto;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        
     }
-    
 }
 
+@media screen and (max-width:480px) {
+    .container {
+        width: 95%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
