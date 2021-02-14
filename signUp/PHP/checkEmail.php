@@ -1,24 +1,15 @@
 <?php
 session_start();
 header("Access-Control-Allow-Origin: *"); 
-$host = "localhost";
-$user = "root";
-$password == "";
-$db = "";
+$conn = mysqli_connect("localhost", "combeons_ecombee", "Jorden2009", "combeons_MainDatabase");
 $email    = $_POST["email"];
 $count;
+//   $stmt->bind_param("ssss", $firstName, $lastName, $email, $password);
+$query = "SELECT EMAIL FROM USERS WHERE EMAIL = '$email'";
+$result = mysqli_query($conn, $query);
 
-$conn = mysqli_connect($host, $user, $password, $db);
+$row_count = mysqli_num_rows($result);
 
-if ($conn->connect_error) {
-     die("Connection failed: " . $conn->connect_error);
- }
- $stmt = $conn->prepare("SELECT EMAIL FROM USERS WHERE EMAIL = ?");
- $stmt->bind_param("s",$email);
-
- $result = $stmt->execute();
- $row_count = mysqli_num_rows($result);
-
- echo $row_count;
+echo $row_count;
 
 ?>
