@@ -1,5 +1,5 @@
 # Sign-Up
-This is a simple yet effect sign up page that you can add to any web page. It is mobile responsive and I made sure to keep to HTML and 
+This is a sign up page that you can add to any web page. It is mobile responsive and I made sure to keep to HTML and 
 CSS easy to change for your needs.
 
 ![Image of SignUp](https://github.com/ecombee28/Sign-Up/blob/master/signUp/images/Screen%20Shot%202019-05-04%20at%204.55.18%20PM.png)
